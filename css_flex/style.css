@@ -51,22 +51,14 @@ https://www.flexboxdefense.com
 
 .bloco-1 {
     background-color: var(--cor-bloco-impar);
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex: 0 0 auto;
-    align-self: flex-start;
 }
 
 .bloco-2 {
     background-color: var(--cor-bloco-par);
-    flex-grow: 0;
-    flex: shrink 1;;
 }
 
 .bloco-3 {
     background-color: var(--cor-bloco-impar);
-    flex-grow: 0;
-    flex-shrink: 1;
 }
 
 .bloco-4 {
