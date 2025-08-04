@@ -28,12 +28,12 @@ https://www.flexboxdefense.com
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: center;
     row-gap: 10px;
-    column-gap: 30px;
+    column-gap: 10px;
 
     /* INDIFERENTE */
     background-color: antiquewhite;
@@ -41,14 +41,16 @@ https://www.flexboxdefense.com
     height: 500px;
 }
 :root{
-    --tamanho_fonte:40px;
-    --altura-blocos:150px;
-    --largura-blocos:100px;
+    --tamanho-fonte:20px;
+    --altura-bloco:150px;
+    --largura-bloco:110px;
+    --padding-bloco:15px;
+    --cor-bloco-impar: rgb(180, 44, 101);
+    --cor-bloco-par: rgb(44, 101, 180);
 }
 
 .bloco-1 {
-    background-color: aquamarine;
-    padding: 15px;
+    background-color: var(--cor-bloco-impar);
     flex-grow: 0;
     flex-shrink: 1;
     flex: 0 0 auto;
@@ -56,61 +58,53 @@ https://www.flexboxdefense.com
 }
 
 .bloco-2 {
-    background-color: rgb(255, 214, 127);
-    padding: 15px;
+    background-color: var(--cor-bloco-par);
     flex-grow: 0;
-    flex-shrink: 1;
+    flex: shrink 1;;
 }
 
 .bloco-3 {
-    background-color: rgb(197, 127, 255);
-    padding: 15px;
+    background-color: var(--cor-bloco-impar);
     flex-grow: 0;
     flex-shrink: 1;
 }
 
 .bloco-4 {
-    background-color: rgb(127, 146, 255);
-    padding: 15px;
+    background-color: var(--cor-bloco-par);
 }
 
 .bloco-5 {
-    background-color: rgb(129, 127, 255);
-    padding: 15px;
+    background-color: var(--cor-bloco-impar);
 }
 
 .bloco-6 {
-    background-color: rgb(255, 157, 127);
-    padding: 15px;
+    background-color: var(--cor-bloco-par);
 }
 
 .bloco-7 {
-    background-color: rgb(240, 28, 28);
-    padding: 15px;
+    background-color: var(--cor-bloco-impar);
 }
 
 .bloco-8 {
-    background-color: rgb(169, 74, 247);
-    padding: 15px;
+    background-color:   var(--cor-bloco-par);
 }
 
 .bloco-9 {
-    background-color: rgb(245, 44, 77);
-    padding: 15px;
+    background-color: var(--cor-bloco-impar);
 }
 
 .bloco-10 {
-    background-color: rgb(85, 233, 93);
-    padding: 15px;
+    background-color: var(--cor-bloco-par)   
 }
 
 .bloco-1, .bloco-2, .bloco-3, .bloco-4,
 .bloco-5, .bloco-6, .bloco-7, .bloco-8,
 .bloco-9, .bloco-10 {
-    height: var(--altura-blocos);
-    width: var(--largura-blocos);
+    height: var(--altura-bloco);
+    width: var(--largura-bloco);
     text-align: center;
-    font-size: var(--tamanho_fonte);
+    font-size: var(--tamanho-fonte);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 16px;
+    padding: var(--padding-bloco);
 }
